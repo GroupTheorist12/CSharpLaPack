@@ -75,3 +75,99 @@ sudo apt-get install build-essential
 
 [Install the .NET SDK](https://docs.microsoft.com/en-us/dotnet/core/install/linux-ubuntu)
 
+### Example C# console project
+
+Let's walk through the steps to create a C# .NET 5.0 project to call the above Fortran subroutine.
+
+#### Create console app using *dotnet*  cli.
+
+Open a terminal window and enter the following (I am doing it from my HOME directory):
+
+```bash
+$ dotnet new console -o CSharpCallingLaPack
+```
+
+Change directories to CSharpCallingLaPack
+
+```bash
+$ cd CSharpCallingLaPack
+```
+
+#### Edit Program.cs
+
+With your trusty editor (I am using VSCode) edit the *Program.cs* and cut and paste the code from below into it:
+
+```c#
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.Text;
+
+using System.Linq;
+
+using System.Runtime.InteropServices;
+
+namespace CSharpCallingLaPack
+{
+    class Program
+    {
+        [DllImport("lapack_module.so", CallingConvention = CallingConvention.Cdecl)]
+        static extern void sgesv_dotnet(float[,] a, float[] b, ref int cols, ref int rows, ref int rc);
+        static void Main(string[] args)
+        {
+            float[,] a = new float[,]
+           {
+                {2.0f, 1.0f},
+                {3.0f, 1.0f}
+
+           };
+
+            float[] b = new float[] { 5.0f, 6.0f };
+
+            int cols = 2;
+            int rows = 2;
+            int rc = 2;
+            int i = 0;
+
+
+            //Transpose matrix. rows become columns
+            float[,] at = new float[cols, rows];
+            for (i = 0; i < cols; i++)
+            {
+                for (int j = 0; j < rows; j++)
+                {
+                    at[j, i] = a[i, j];
+                }
+            }
+
+            //Execute fortran subroutine
+            sgesv_dotnet(at, b, ref cols, ref rows, ref rc);
+
+
+            Console.WriteLine("From fortran");
+
+            Console.Write("[");
+            for (i = 0; i < cols; i++)
+            {
+                if (i < cols - 1)
+                {
+                    Console.Write("{0:0.00}\t", b[i]);
+
+                }
+                else
+                {
+                    Console.Write("{0:0.00}", b[i]);
+
+                }
+            }
+            Console.Write("]");
+
+            Console.WriteLine();
+
+
+        }
+    }
+}
+
+```
+
