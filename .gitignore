@@ -1,2 +1,10 @@
 
 obj/Debug/net5.0/apphost.exe
+CSharpCallingLaPack/bin/Debug/net5.0/CSharpCallingLaPack.dll
+CSharpCallingLaPack/bin/Debug/net5.0/lapack_module.so
+CSharpCallingLaPack/bin/Debug/net5.0/ref/CSharpCallingLaPack.dll
+CSharpCallingLaPack/lapack_module.mod
+CSharpCallingLaPack/lapack_module.so
+CSharpCallingLaPack/obj/Debug/net5.0/ref/CSharpCallingLaPack.dll
+CSharpCallingLaPack/obj/Debug/net5.0/CSharpCallingLaPack.dll
+CSharpCallingLaPack/obj/Debug/net5.0/CSharpCallingLaPack.pdb

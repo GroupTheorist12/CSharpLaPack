@@ -1,0 +1,16 @@
+/home/brigg/CSharpCallingLaPack/bin/Debug/net5.0/CSharpCallingLaPack
+/home/brigg/CSharpCallingLaPack/bin/Debug/net5.0/CSharpCallingLaPack.deps.json
+/home/brigg/CSharpCallingLaPack/bin/Debug/net5.0/CSharpCallingLaPack.runtimeconfig.json
+/home/brigg/CSharpCallingLaPack/bin/Debug/net5.0/CSharpCallingLaPack.runtimeconfig.dev.json
+/home/brigg/CSharpCallingLaPack/bin/Debug/net5.0/CSharpCallingLaPack.dll
+/home/brigg/CSharpCallingLaPack/bin/Debug/net5.0/ref/CSharpCallingLaPack.dll
+/home/brigg/CSharpCallingLaPack/bin/Debug/net5.0/CSharpCallingLaPack.pdb
+/home/brigg/CSharpCallingLaPack/obj/Debug/net5.0/CSharpCallingLaPack.csprojAssemblyReference.cache
+/home/brigg/CSharpCallingLaPack/obj/Debug/net5.0/CSharpCallingLaPack.GeneratedMSBuildEditorConfig.editorconfig
+/home/brigg/CSharpCallingLaPack/obj/Debug/net5.0/CSharpCallingLaPack.AssemblyInfoInputs.cache
+/home/brigg/CSharpCallingLaPack/obj/Debug/net5.0/CSharpCallingLaPack.AssemblyInfo.cs
+/home/brigg/CSharpCallingLaPack/obj/Debug/net5.0/CSharpCallingLaPack.csproj.CoreCompileInputs.cache
+/home/brigg/CSharpCallingLaPack/obj/Debug/net5.0/CSharpCallingLaPack.dll
+/home/brigg/CSharpCallingLaPack/obj/Debug/net5.0/ref/CSharpCallingLaPack.dll
+/home/brigg/CSharpCallingLaPack/obj/Debug/net5.0/CSharpCallingLaPack.pdb
+/home/brigg/CSharpCallingLaPack/obj/Debug/net5.0/CSharpCallingLaPack.genruntimeconfig.cache

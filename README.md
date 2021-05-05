@@ -45,6 +45,8 @@ The code in this git exploits this interoperability to call Fortran routines fro
 
 This example can solve a series of simultaneous equations.
 
+![AX = B](C:\Users\Owner\CSharpFortran\CSharpFortran\lapack.svg)
+
 Below is the C# code which will call the Fortran subroutine.
 
 ### Example P/Invoke C# code to call Fortran Subroutine.
@@ -170,4 +172,87 @@ namespace CSharpCallingLaPack
 }
 
 ```
+
+#### Copy LAPACK libraries to your usr/local/lib directory
+
+I have provided the libraries on my github site so you can just *wget* them into your */usr/local/lib* directory.
+
+Enter the following into a terminal window.
+
+```bash
+$ cd /usr/local/lib
+$ sudo wget https://github.com/GroupTheorist12/CSharpLaPack/blob/main/lib/libblas.a
+$ sudo wget https://github.com/GroupTheorist12/CSharpLaPack/blob/main/lib/liblapack.a
+$ sudo wget https://github.com/GroupTheorist12/CSharpLaPack/blob/main/lib/libtmglib.a
+```
+
+#### Create Fortran Source File lapack_module.f90
+
+Change back to the *CSharpCallingLaPack* directory and with your favorite editor cut and paste the Fortran code below and save it.
+
+```fortran
+module lapack_module
+    use, intrinsic :: iso_c_binding !allow c type bindings and function names
+    implicit none !types must be declared
+contains
+
+    subroutine sgesv_dotnet(a, b, cols, rows, rc) bind(c, name='sgesv_dotnet')
+        implicit none
+        external :: sgesv
+        real(c_float), intent(in) :: a(cols, rows)  ! Matrix A.
+        real(c_float), intent(inout) :: b(cols)     ! Vector b/x.
+        integer(c_int), intent(in)  :: cols       ! columns.
+        integer(c_int), intent(in)  :: rows       ! rows.
+        integer(c_int), intent(inout)  :: rc       ! Return code.
+
+        real     :: pivot(cols) ! Pivot indices (list of swap operations).
+
+        call sgesv(cols, 1, a, rows, pivot, b, cols, rc)
+    end subroutine sgesv_dotnet
+
+end module lapack_module
+
+```
+
+#### Create Fortran Shared Library
+
+Enter the following in your terminal window to create the Fortran shared library.
+
+```bash
+$ gfortran -L/usr/local/lib/ -shared -O2 lapack_module.f90 -o lapack_module.so -fPIC -llapack -lblas
+```
+
+#### Run the dotnet build command
+
+Enter the following in your terminal window to build the C# project and copy the Fortran module 
+
+```bash
+$ dotnet build
+$ cp lapack_module.so bin/Debug/net5.0
+```
+
+#### Run the app
+
+Run  the following from the terminal window to run the app.
+
+```bash
+$ dotnet run
+```
+
+You should see the following output:
+
+```bash
+From fortran
+[1.00   3.00]
+```
+
+### Final Remarks
+
+I was surprised by how much I enjoyed working with Fortran and the huge amount of mathematical library code that is written in it. The cool thing about Fortran is that optimizing compilers (Intel) can really speed up operations that involve huge arrays and matrices.
+
+The source code for the above project and other projects I am working on can be found at:
+
+[CSharpLaPack]: https://github.com/GroupTheorist12/CSharpLaPack
+
+Thanks for reading!
 
