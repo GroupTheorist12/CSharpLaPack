@@ -1,3 +1,8 @@
+/mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/CSharpLaPack.csprojAssemblyReference.cache
+/mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/CSharpLaPack.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/CSharpLaPack.AssemblyInfoInputs.cache
+/mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/CSharpLaPack.AssemblyInfo.cs
+/mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/CSharpLaPack.csproj.CoreCompileInputs.cache
 /mnt/c/Users/Owner/FortranProjects/CSharpLaPack/bin/Debug/net5.0/CSharpLaPack
 /mnt/c/Users/Owner/FortranProjects/CSharpLaPack/bin/Debug/net5.0/CSharpLaPack.deps.json
 /mnt/c/Users/Owner/FortranProjects/CSharpLaPack/bin/Debug/net5.0/CSharpLaPack.runtimeconfig.json
@@ -5,11 +10,6 @@
 /mnt/c/Users/Owner/FortranProjects/CSharpLaPack/bin/Debug/net5.0/CSharpLaPack.dll
 /mnt/c/Users/Owner/FortranProjects/CSharpLaPack/bin/Debug/net5.0/ref/CSharpLaPack.dll
 /mnt/c/Users/Owner/FortranProjects/CSharpLaPack/bin/Debug/net5.0/CSharpLaPack.pdb
-/mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/CSharpLaPack.csprojAssemblyReference.cache
-/mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/CSharpLaPack.GeneratedMSBuildEditorConfig.editorconfig
-/mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/CSharpLaPack.AssemblyInfoInputs.cache
-/mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/CSharpLaPack.AssemblyInfo.cs
-/mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/CSharpLaPack.csproj.CoreCompileInputs.cache
 /mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/CSharpLaPack.dll
 /mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/ref/CSharpLaPack.dll
 /mnt/c/Users/Owner/FortranProjects/CSharpLaPack/obj/Debug/net5.0/CSharpLaPack.pdb

@@ -45,7 +45,7 @@ The code in this git exploits this interoperability to call Fortran routines fro
 
 This example can solve a series of simultaneous equations.
 
-![AX = B](C:\Users\Owner\CSharpFortran\CSharpFortran\lapack.svg)
+![AX = B](C:\Users\Owner\Desktop\lapack.svg)
 
 Below is the C# code which will call the Fortran subroutine.
 
