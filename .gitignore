@@ -8,3 +8,8 @@ CSharpCallingLaPack/lapack_module.so
 CSharpCallingLaPack/obj/Debug/net5.0/ref/CSharpCallingLaPack.dll
 CSharpCallingLaPack/obj/Debug/net5.0/CSharpCallingLaPack.dll
 CSharpCallingLaPack/obj/Debug/net5.0/CSharpCallingLaPack.pdb
+bin/Debug/net5.0/ref/CSharpLaPack.dll
+bin/Debug/net5.0/CSharpLaPack.dll
+obj/Debug/net5.0/ref/CSharpLaPack.dll
+obj/Debug/net5.0/CSharpLaPack.pdb
+obj/Debug/net5.0/CSharpLaPack.dll

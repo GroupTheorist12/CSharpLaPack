@@ -96,7 +96,10 @@ namespace CSharpLaPack
     {
         static void Main(string[] args)
         {
-            sgesv.Test();
+            //sgesv.Test();
+            dgetri.Test();
+            dgetri.Test_Fortran();
+
         }
     }
 }
